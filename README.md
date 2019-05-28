@@ -15,7 +15,7 @@ Create secgroup for VPC with full internal access between hosts.
 
 ```
 module "app" {
-  source = "git::ssh://git@gitlab.playkot.com/Ops/terraform/instance.git?ref=master"
+  source = "git::https://github.com/crysalis/ec2_instance.git"
 
   instance            = "app"
 
@@ -68,6 +68,7 @@ module "app" {
 | `volume_extra_type`  | `standard`    |                                 | No       |
 | `volume_extra_path`  | `/dev/xvdb`   |                                 | No       |
 | `iam_instance_profile`| ``           | IAM profile to start with       | No       |
+| `user_data`          | ``            | user data for instance          | No       |
 
 ## Output values
 
